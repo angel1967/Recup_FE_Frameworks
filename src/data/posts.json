@@ -1,0 +1,39 @@
+{
+    "posts": [ {
+        "id": 1,
+        "likes": 10,
+        "minutes": 10,
+        "user": "@eric",
+        "img": "https://picsum.photos/id/999/200/300",
+        "text": "UNO Some quick example text to build on the card title",
+      }, {
+        "id": 2,
+        "likes": 30,
+        "minutes": 25,
+        "user": "@castaned",
+        "img": "https://picsum.photos/id/998/200/300",
+        "text": "DOS  Some quick example text to build on the card title",
+      }, {
+        "id": 3,
+        "likes": 50,
+        "minutes": 60,
+        "user": "@nibaldo",
+        "img": "https://picsum.photos/id/997/200/300",
+        "text": "TRES  Some quick example text to build on the card title",
+      }, {
+        "id": 4,
+        "likes": 33,
+        "minutes": 45,
+        "user": "@nibaldo",
+        "img": "https://picsum.photos/id/996/200/300",
+        "text": "CUATRO  Some quick example text to build on the card title" ,
+      }, {
+        "id": 5,
+        "likes": 28,
+        "minutes": 36,
+        "user": "@lucero",
+        "img": "https://picsum.photos/id/995/200/300",
+        "text": "CINCO  Some quick example text to build on the card title" ,
+      }
+ ]
+}
