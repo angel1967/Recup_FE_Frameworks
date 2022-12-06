@@ -1,39 +1,81 @@
 {
     "posts": [ {
         "id": 1,
-        "likes": 10,
-        "minutes": 10,
-        "user": "@eric",
-        "img": "https://picsum.photos/id/999/200/300",
-        "text": "UNO Some quick example text to build on the card title",
+        "createdAt": "11/15/2022",
+        "author": "@eric",
+        "text": "UNO ONE       Some quick example text to build on the card title",
+        "comments": 15,
+        "image": "https://picsum.photos/id/999/200/200"
       }, {
         "id": 2,
-        "likes": 30,
-        "minutes": 25,
-        "user": "@castaned",
-        "img": "https://picsum.photos/id/998/200/300",
-        "text": "DOS  Some quick example text to build on the card title",
+        "createdAt": "11/05/2022",
+        "author": "@castaned",
+        "text": "DOS  TWO      Some quick example text to build on the card title",
+        "comments": 13,
+        "image": "https://picsum.photos/id/998/200/200"
       }, {
         "id": 3,
-        "likes": 50,
-        "minutes": 60,
-        "user": "@nibaldo",
-        "img": "https://picsum.photos/id/997/200/300",
-        "text": "TRES  Some quick example text to build on the card title",
+        "createdAt": "12/01/2022",
+        "author": "@nibaldo",
+        "text": "TRES  THREE   Some quick example text to build on the card title",
+        "comments": 5, 
+        "image": "https://picsum.photos/id/997/200/200"
       }, {
         "id": 4,
-        "likes": 33,
-        "minutes": 45,
-        "user": "@nibaldo",
-        "img": "https://picsum.photos/id/996/200/300",
-        "text": "CUATRO  Some quick example text to build on the card title" ,
+        "createdAt": "12/01/2022",
+        "author": "@charlie",
+        "text": "CUATRO FOUR Some quick example text to build on the card title",
+        "comments": 35, 
+        "image": "https://picsum.photos/id/996/200/200"
       }, {
         "id": 5,
-        "likes": 28,
-        "minutes": 36,
-        "user": "@lucero",
-        "img": "https://picsum.photos/id/995/200/300",
-        "text": "CINCO  Some quick example text to build on the card title" ,
-      }
+        "createdAt": "11/01/2022",
+        "author": "@lucero",
+        "text": "CINCO  FIVE   Some quick example text to build on the card title",
+        "comments": 5, 
+        "image": "https://picsum.photos/id/995/200/200"
+        }, {
+        "id": 6,
+        "createdAt": "11/01/2022",
+        "author": "@alexis",
+         "text": "SEIS  SIX    Some quick example text to build on the card title",
+         "comments": 8, 
+         "image": "https://picsum.photos/id/994/200/200"
+         }, {
+          "id": 7,
+          "createdAt": "10/05/2022",
+          "author": "@castro",
+          "text": "SIETE  SEVEN  Some quick example text to build on the card title",
+          "comments": 13,
+          "image": "https://picsum.photos/id/993/200/200"
+        }, {
+          "id": 8,
+          "createdAt": "11/21/2022",
+          "author": "@nibeth",
+          "text": "OCHO  EIGHT   Some quick example text to build on the card title",
+          "comments": 65, 
+          "image": "https://picsum.photos/id/992/200/200"
+        }, {
+          "id": 9,
+          "createdAt": "10/31/2022",
+          "author": "@charles",
+          "text": "NUEVE  NINE   Some quick example text to build on the card title",
+          "comments": 15, 
+          "image": "https://picsum.photos/id/991/200/200"
+        }, {
+          "id": 10,
+          "createdAt": "11/11/2022",
+          "author": "@lucy",
+          "text": "DIEZ  TEN     Some quick example text to build on the card title",
+          "comments": 1, 
+          "image": "https://picsum.photos/id/990/200/200"
+          }, {
+          "id": 11,
+          "createdAt": "11/12/2022",
+          "author": "@alex",
+           "text": "ONCE  ELEVEN Some quick example text to build on the card title",
+           "comments": 8, 
+           "image": "https://picsum.photos/id/989/200/200"
+    }
  ]
 }

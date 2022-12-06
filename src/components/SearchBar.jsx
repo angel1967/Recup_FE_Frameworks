@@ -1,15 +1,17 @@
-// Componente Tarea Aplicación Estatica //
-function SearchBar() {
-    return<div> 
+// Componente Tarea Aplicación Dinamica SearchBar //
+// al cambio de estado onChange, presenta la variable(texto) en el campo de entrada //
 
-    <div className="container-fluid pt-3 p-2">
-         <input type="search" 
-         id="form1" 
-         className="form-control " 
-         placeholder="Search" 
-         aria-label="Search" />
+function SearchBar({search , doSearch}) {
+    return (
+    <div className="container pt-3"> 
+         <input 
+         value={search}
+         onChange={(event) => {
+            doSearch(event.target.value);
+         }}
+         className="form-control mb-2" 
+         placeholder="Search Card Text" />
     </div>
- 
-    </div>;
+    );
 }
 export default SearchBar;
