@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import Post from './Post'; /* Aquí importo el componente Post (Nieto)*/
-import { getPosts } from "../service/data-service";  /* Datos y timer */
+import { getPosts } from "../services/data-service";  /* Datos y timer */
 
 //Inicializamos el estado inicial y la promesa de carga de datos
 // Creación del servicio temporizador para la carga 

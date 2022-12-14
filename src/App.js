@@ -3,7 +3,8 @@ import './App.css';
 import NavBar from './components/NavBar' /* Aquí importo el componente NavBar */
 import SearchBar from './components/SearchBar' /* Aquí importo el comp SearchBar */
 import PostsList from './components/PostsList' /* Aquí importo el componente PostList */
-import Profile from './components/Profile'   /* Aquí importo el componente Profile */  
+import Profile from './components/Profile'   /* Aquí importo el componente Profile */
+import Login from './components/Login'   /* Aquí importo el componente Login */  
 
 function App() {
   const [search, setSearch] = useState(""); /* Estado inicial SearchBar*/
@@ -12,18 +13,27 @@ function App() {
     setSearch(text);
   }
   const [profileState, setProfile] = useState(false); /* Estado inicial Profile*/
+  const [tokenState, setToken] = useState(""); /* Estado inicial (Token)Login*/
+
 
   return (
     <div className="App"> 
-    < NavBar   profile={profileState} setProfile={setProfile}/>  
-    < Profile  profile={profileState} />
-    { profileState === false ? <>
-      < SearchBar search={search} doSearch={doSearch}  /> 
-      < PostsList search={search} /> 
-       </>
-      : null
-    }
 
+    { tokenState !== "" ? (
+      <>
+      < NavBar   profile={profileState} setProfile={setProfile}/> 
+      < Profile  profile={profileState}  />
+
+      { profileState === false ? <>
+        < SearchBar search={search} doSearch={doSearch}  /> 
+        < PostsList search={search} /> 
+         </>
+        : null 
+      }  </>
+     ) : (
+      < Login setToken={setToken}/> 
+      )
+    }
     </div>
   );
 }
