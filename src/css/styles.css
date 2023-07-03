@@ -1,0 +1,70 @@
+/* Formato para la foto en cuadro MAC01*/
+
+.image300 {
+    width: 300px;
+    height: 300px;
+}
+
+.card-text-container {
+    height: 4em;
+    /* Adjust this value as needed */
+    line-height: 1em;
+    /* Ensure proper line height */
+    overflow: hidden;
+    /* Agrega un borde inferior */
+    border-bottom: 1px solid black;
+
+}
+
+.with-border-bottom {
+    border-bottom: 1px solid black;
+    /* Agrega un borde inferior */
+}
+
+.logout-button {
+    background-color: #aacfea;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transform: translateY(0);
+    transition: transform 0.3s, box-shadow 0.3s;
+    float: right;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.logout-icon {
+    margin-right: 5px;
+    /* Ajusta los píxeles a la derecha según tus necesidades */
+}
+
+
+.logout-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.logout-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.Header-nav {
+    margin-left: auto;
+}
+
+.Navbar-brand {
+    font-size: 1.5rem;
+    color: rgb(43, 39, 39);
+}
+
+.Navbar-link {
+    font-size: 1.5rem;
+    color: rgb(43, 39, 39);
+    margin-top: 0.5rem;
+}

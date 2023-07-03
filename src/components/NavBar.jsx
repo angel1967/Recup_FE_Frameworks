@@ -1,28 +1,35 @@
 import { useState } from 'react';
+import React from 'react'; //Logout
+import '../css/styles.css'; // Logout archivo CSS para estilos personalizados
 
-function NavBar( { profile, setProfile }) {
-   
+function NavBar({ profile, setProfile }) {
+
     const activaApaga = () => {
-        setProfile(!profile);}  
+        setProfile(!profile);
+    }
+    console.log("valor de Profile en Header", profile); //MAC 01 Checador
 
+    return <div>
+        <nav className="Navbar Navbar-expand-lg bg-light text-dark">
+            <div className="container-fluid d-flex justify-content-between">
+                <a className="Navbar-link" href="/">
+                    <i className="bi bi-lightning-charge text-dark"></i> Three pics
+                </a>
+                <a className=" Navbar-link" href="/postslist">Post</a>
+                <a className=" Navbar-link" href="/logout">Logout</a>
 
-    return<div> 
-    <nav className="navbar navbar-expand-lg bg-light text-dark">
-        <div className="container-fluid">
-            <a className="navbar-brand" onClick={() => setProfile(false)}
-            href="#"><i 
-            className="bi bi-lightning-charge"></i>three pics
-            </a> 
-            <button onClick={activaApaga}
-            type="button" 
-            className="btn btn-secondary btn-circle btn-xl bi bi-lg bi-person-circle">
-            </button>
-      
-        </div>
-    </nav>
-    </div>;
+                <a href="/profile"
+                    className="btn btn-secondary btn-circle btn-xl"
+                    style={{ position: 'relative', padding: 0 }}   >
+                    <i className="bi bi-person-circle"
+                        style={{
+                            fontSize: '2.5rem', lineHeight: '1.2', position: 'absolute', left: '0.1em', top: '0.0em',
+                        }}
+                    ></i>
+                </a>
+            </div>
+        </nav >
+
+    </div >;
 }
 export default NavBar;
-
-
-

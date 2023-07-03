@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import './App.css';
-import NavBar from './components/NavBar' /* Aquí importo el componente NavBar */
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; /* Importo la libreria*/
+import NavBar from './components/NavBar' /* Aquí importo el componente Header */
 import SearchBar from './components/SearchBar' /* Aquí importo el comp SearchBar */
 import PostsList from './components/PostsList' /* Aquí importo el componente PostList */
 import Profile from './components/Profile'   /* Aquí importo el componente Profile */
 import Login from './components/Login'   /* Aquí importo el componente Login */
+import Logout from './components/Logout'   /* Aquí importo el componente Logout */
+import LogoutButton from './components/Logout';
+
 
 function App() {
   const [search, setSearch] = useState(""); /* Estado inicial SearchBar*/
@@ -13,50 +18,49 @@ function App() {
     setSearch(text);
   }
   const [profileState, setProfile] = useState(false); /* Estado inicial Profile*/
-  const [tokenState, setToken] = useState("123"); /* Estado inicial (Token)Login*/
+  const [tokenState, setToken] = useState(localStorage.getItem("token")); /*obtenemos el token LOS*/
+
+  const Title = () => {
+    return (
+      <div style={{ textAlign: 'center' }}>
+        <h1>Harvard Art Museums</h1>
+      </div>
+    )
+  }
 
 
   return (
-    <div className="App">
+    tokenState ?
+      <div className="App">
+        <BrowserRouter>
+          <NavBar />
 
-      {tokenState !== "" ? (
-        <>
-          < NavBar profile={profileState} setProfile={setProfile} />
-          < Profile profile={profileState} />
+          <Routes>
+            <Route path="/" element={<Title />} />
+            <Route path="/login" element={<Login setToken={setToken} />} />
+            <Route path="/logout" element={<Logout setToken={setToken} />} />
+            <Route path="/postslist" element={<Fragment>
+              <Title />
+              <SearchBar doSearch={doSearch} />
+              <PostsList search={search} />
+            </Fragment>} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
 
-          {profileState === false ? <>
-            < SearchBar search={search} doSearch={doSearch} />
-            < PostsList search={search} />
-          </>
-            : null
-          }  </>
-      ) : (
-        < Login setToken={setToken} />
-      )
-      }
-    </div>
+        </BrowserRouter>
+
+      </div > :
+      <Fragment><Title />
+        <BrowserRouter>
+
+          <Routes>
+            <Route path="/" element={<Login setToken={setToken} />} />
+            <Route path="/login" element={<Login setToken={setToken} />} />
+          </Routes>
+
+        </BrowserRouter>
+      </Fragment>
   );
 }
 
 export default App;
-
-// import React from 'react';
-// import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-// import Home from './components/Home';
-// import About from './components/About';
-// import Contact from './components/Contact';
-
-// function App() {
-//   return (
-//     <BrowserRouter>
-//       <Switch>
-//         <Route exact path="/" component={Home} />
-//         <Route path="/about" component={About} />
-//         <Route path="/contact" component={Contact} />
-//       </Switch>
-//     </BrowserRouter>
-//   );
-// }
-
-// export default App;
